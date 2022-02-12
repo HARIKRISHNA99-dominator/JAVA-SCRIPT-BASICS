@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+function validate()
+{
+
+var text = document.getElementById("text1").value;
+
+var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).(a-z{2-20})(.[a-z]{2-5})$/;            //+ is to add more char in email name else{2,10} --> range of min 2 to max 10
+
+if(regx.test(text))
+{
+    document.getElementById("kno").innerHTML="Valid";
+    document.getElementById("kno").style.visibility="Visible";
+    document.getElementById("kno").style.color="green";
+}
+else
+{
+    document.getElementById("kno").innerHTML="InValid";
+    document.getElementById("kno").style.visibility="Visible";
+    document.getElementById("kno").style.color="red";
+}
+
+}
+
+</script>
+
+
+</head>
+<body>
+    <form>
+        <input id = "text1" placeholder="Email" type="text"/><br>
+        <label id="kno" style="color: brown; visibility: hidden;">INVALID</label>
+        <br><br>
+        <button onclick="validate()" type="button">Submit</button>
+        </form>
+
+</body>
+</html>
