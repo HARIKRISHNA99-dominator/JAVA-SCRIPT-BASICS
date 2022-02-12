@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+
+function validate(){
+
+    var uname = document.getElementById("uname").value;
+    // regx = new RegExp("E00","i");
+     var regx = /[A-Z]00/;        //else /[1-100]abc/ /[A,S,H]man/ else ^--> is ised to exclude like / [^1,a,c]man
+    if(regx.test(uname))
+    {
+        document.getElementById("kno").style.visibility="hidden";
+         alert("valid");
+    }
+    else{
+        document.getElementById("kno").style.visibility="visible";
+        // alert("invalid")
+    }
+
+}
+
+
+    </script>
+</head>
+<body>
+    <form>
+        <input id="uname" placeholder="USERNAME" type="text" />
+        <label id="kno" style="color: brown; visibility: hidden;">INVALID USERNAME</label>
+        <br><br>
+
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>
