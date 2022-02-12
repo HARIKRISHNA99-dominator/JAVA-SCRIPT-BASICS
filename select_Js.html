@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script>
+
+function fun()
+{
+    var select = document.getElementById("s1")
+    alert(select.options[select.selectedIndex].value);
+}
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+    
+<select id="s1">
+    <option value="legend">Legend</option>
+    <option value="unique">Unique</option>
+    <option value="valuable">Valuable</option>
+</select>
+
+<br>
+
+<button onclick="fun" id="b1">Click In</button>
+
+
+
+</body>
+</html>
