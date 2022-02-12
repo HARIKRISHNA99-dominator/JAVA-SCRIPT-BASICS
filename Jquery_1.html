@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jquery</title>
+</head>
+<body>
+    <h2>events in Jquery</h2>
+    <p>This is a paragraph outside div</p>
+
+    <div id="firstdiv" class="mydivs">
+        <p>This is the first division</p>
+        <p>This is the second division</p>
+    </div>
+
+    <div id="seconddiv" class="mydivs">
+        <p>This is the third division</p>
+    </div>
+
+    <div id="thirddiv" class="mydivs">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+        </div>
+
+        <button onclick="fn1()" id="btn1">Click</button>
+        <button onclick="fn2()" id="btn2">Click</button>
+
+</body>
+
+<script src = "E:\java script basics/jquery.js"></script>
+<script>
+
+
+$(document).ready(function (){
+
+    $("#btn1").mouseenter(fn1);
+    $("#btn1").mouseenter(fn2);
+
+    $("#btn2").hover(fn1,fn2);
+
+
+
+function fn1()
+{
+    // $(".mydivs") $("#firstdiv").fadeOut();
+}
+
+function fn2(){
+    $("#firstdiv").fadeIn();
+}
+});
+
+</script>
+
+</html>
